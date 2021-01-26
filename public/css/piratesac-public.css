@@ -1,0 +1,113 @@
+body
+{
+}
+
+div.pacbar
+{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: 0px auto;
+    padding: 0px;
+    font-family: Verdana, Arial;
+}
+
+div.pacbar .pacbar-wrapper
+{
+    background-color: #ffffff;
+    width: 100%;
+    border-bottom: 10px solid #e5d247;
+}
+
+
+div.pacbar.closed .pacbar-inner
+{
+    width: 90%;
+    height: 60px;
+    margin: 0px 5%;
+    text-align: center;
+    position: relative;
+    padding: 25px 0px 0px;
+}
+
+div.pacbar .pacbar-inner
+{
+    background-color: #ffffff;
+}
+
+div.pacbar .pacbar-inner h3
+{
+    display: inline-block;
+    padding-right: 10%;
+    color: #010101;
+    font-size: 22px;
+    text-align: left;
+}
+
+div.pacbar .pacbar-inner ul
+{
+    display: inline-block;
+}
+
+div.pacbar .pacbar-inner ul li
+{
+    display: inline;
+    padding-right: 30px;
+}
+
+div.pacbar .pacbar-inner ul li:last-child
+{
+    padding-right: 0px;
+}
+
+div.pacbar .pacbar-inner ul li a
+{
+    font-weight: bold;
+    background-color: #191919;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: #cfcfcf;
+    border-radius: 20px;
+}
+
+div.pacbar .pacbar-inner ul li a.enabled,
+div.pacbar.closed .pacbar-control a
+{
+    background-color: #e3d244;
+    color: #040000;
+    font-weight: normal;
+}
+
+div.pacbar .pacbar-control
+{
+    width: 100%;
+    margin: 0px -7%;
+    z-index: 9999;
+    text-align: right;
+    position: absolute;
+}
+
+body div.pacbar .pacbar-control a
+{
+    display: inline-block;
+    height: 65px;
+    background-color: #e3d244;
+    text-align: center;
+    padding: 2px 10px 6px 10px !important;
+    color: #121212;
+    font-size: 16px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+div.pacbar.closed .pacbar-control
+{
+
+}
+
+div.pacbar.closed .pacbar-control a
+{
+    font-weight: bold;
+    height: auto;
+    width: auto;
+    padding: initial;
+}

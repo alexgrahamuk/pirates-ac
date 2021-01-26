@@ -150,16 +150,9 @@ class Piratesac {
 	 * @since    1.0.0
 	 * @access   private
 	 */
-	private function define_admin_hooks() {
-
+	private function define_admin_hooks()
+    {
 		$plugin_admin = new piratesac_admin( $this->get_plugin_name(), $this->get_version() );
-
-     	$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-
-		//Add in the shiz for the menu, we used to have more - may add to in future
-        $this->loader->add_action( 'admin_menu', $plugin_admin, 'add_menu' );
-        $this->loader->add_action( 'admin_init', $plugin_admin, 'register_setting' );
     }
 
 	/**
@@ -176,48 +169,8 @@ class Piratesac {
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 
-		//When files are changed
-        $this->loader->add_filter( 'um_user_pre_updating_files_array', $plugin_public, 'piratesac_pre_update_profile' );
-        //Stop messing on with expiry and issue dates
-        $this->loader->add_action( 'um_user_pre_updating_profile', $plugin_public, 'piratesac_pre_update_profile_date_check');
-
-        //Do some tidy based on yes no fields
-        $this->loader->add_action( 'um_user_after_updating_profile', $plugin_public, 'piratesac_tidy_orphan_data', 10, 2);
-
-        //Show tables for admin
-        $this->loader->add_filter('the_content', $plugin_public, 'admin_dash');
-
-        $fields = get_option("piratesac_verify_fields", "");
-        $fields = trim($fields, ",");
-        $fields = explode(",", $fields);
-
-        foreach ($fields as $field)
-        {
-            /**
-             * Below is causing problems, think not returning a hidden field from hook, will
-             * let um handle it for the moment
-             *
-             */
-            /*
-            //This gets the html display for upload file box in edit mode
-            $instance = new ParamPass(array($plugin_public, 'show_upload_edit'), array($field));
-            add_action('um_'.$field.'_form_edit_field', array( $instance, 'invoke'));
-            $instance = new ParamPass(array($plugin_public, 'show_upload_edit'), array($field, '_issue_date'));
-            add_action('um_'.$field.'_issue_date_form_edit_field', array( $instance, 'invoke'));
-            $instance = new ParamPass(array($plugin_public, 'show_upload_edit'), array($field, '_expiry_date'));
-            add_action('um_'.$field.'_expiry_date_form_edit_field', array( $instance, 'invoke'));
-            */
-
-
-            //This gets the html display for upload file box in display mode
-            $instance = new ParamPass(array($plugin_public, 'show_upload_view'), array($field));
-            add_action('um_'.$field.'_form_show_field', array( $instance, 'invoke'));
-            $instance = new ParamPass(array($plugin_public, 'show_upload_view'), array($field, '_issue_date'));
-            add_action('um_'.$field.'_issue_date_form_show_field', array( $instance, 'invoke'));
-            $instance = new ParamPass(array($plugin_public, 'show_upload_view'), array($field, '_expiry_date'));
-            add_action('um_'.$field.'_expiry_date_form_show_field', array( $instance, 'invoke'));
-        }
-
+        //$this->loader->add_action('highend_before_page_wrapper', $plugin_public, 'pacbar');
+        $this->loader->add_action('get_header', $plugin_public, 'pacbar');
     }
 
 	/**
@@ -260,19 +213,4 @@ class Piratesac {
 		return $this->version;
 	}
 
-}
-
-
-class ParamPass
-{
-
-    function __construct( $cb, $args ) {
-        $this->cb = $cb;
-        $this->args = $args;
-    }
-
-    function invoke() {
-        $args = func_get_args();
-        return call_user_func_array( $this->cb, array_merge( $args, $this->args ) );
-    }
 }

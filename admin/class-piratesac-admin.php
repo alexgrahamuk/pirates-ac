@@ -110,6 +110,7 @@ class Piratesac_Admin
     public function add_menu()
     {
 
+        /*
         $this->plugin_screen_hook_suffix = add_options_page
         (
             'Piratesac',
@@ -128,7 +129,7 @@ class Piratesac_Admin
             plugin_dir_url(__FILE__) . 'images/generic.png',
             20
         );
-
+        */
     }
 
     public function display_options_page()
@@ -139,31 +140,10 @@ class Piratesac_Admin
 
     public function register_setting()
     {
-
-        add_settings_section(
-            $this->option_name . '_general',
-            __('General', 'piratesac'),
-            array($this, $this->option_name . '_general_cb'),
-            $this->plugin_name
-        );
-
-        add_settings_field(
-            $this->option_name . '_admin_email_cb',
-            __('Admin Email', 'admin-email'),
-            array($this, $this->option_name . '_admin_email_cb'),
-            $this->plugin_name,
-            $this->option_name . '_general'
-        );
-
-        register_setting($this->plugin_name, $this->option_name . '_admin_email', 'strval');
     }
 
     public function dashboard_widgets()
     {
-        /**
-         * @todo AG: insert permission check
-         */
-        //wp_add_dashboard_widget('custom_piratesac_notify', 'Piratesac', array($this, 'piratesac_widget'));
     }
 
     public function piratesac_widget()

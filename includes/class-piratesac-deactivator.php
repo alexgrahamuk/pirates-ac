@@ -6,8 +6,8 @@
  * @link       https://a-graham.com
  * @since      1.0.0
  *
- * @package    Umcerts
- * @subpackage Umcerts/includes
+ * @package    Piratesac
+ * @subpackage Piratesac/includes
  */
 
 /**

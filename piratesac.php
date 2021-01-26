@@ -10,18 +10,18 @@
  *
  * @link              https://a-graham.com
  * @since             1.0.0
- * @package           Umcerts
+ * @package           Piratesac
  *
  * @wordpress-plugin
- * Plugin Name:       umcerts
+ * Plugin Name:       Piratesac
  * Plugin URI:        https://a-graham.com
- * Description:       Various amendments to the membership system
+ * Description:       Accessibility tools
  * Version:           1.0.0
  * Author:            A Graham
  * Author URI:        https://a-graham.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       umcerts
+ * Text Domain:       piratesac
  * Domain Path:       /languages
  */
 
@@ -42,7 +42,7 @@ define( 'PIRATESAC_VERSION', '1.0.0' );
  * This action is documented in includes/class-piratesac-activator.php
  */
 function activate_piratesac() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-pirateac-activator.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-piratesac-activator.php';
     Piratesac_Activator::activate();
 }
 
@@ -79,4 +79,4 @@ function run_piratesac() {
 	$plugin->run();
 
 }
-run_umcerts();
+run_piratesac();
