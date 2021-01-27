@@ -1,3 +1,102 @@
+/*Theme specific*/
+
+html body #slider-section
+{
+    display: none !important;
+}
+
+html body #logo
+{
+    display: none !important;
+}
+
+html body #hb-modal-overlay
+{
+    display: none !important;
+}
+
+html body div,
+html body img
+{
+    display: block !important;
+    background-image: none !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+html body span
+{
+    background-image: none !important;
+}
+
+
+
+.vc_col-sm-1,
+.vc_col-sm-10,
+.vc_col-sm-11,
+.vc_col-sm-12,
+.vc_col-sm-2,
+.vc_col-sm-3,
+.vc_col-sm-4,
+.vc_col-sm-5,
+.vc_col-sm-6,
+.vc_col-sm-7,
+.vc_col-sm-8,
+.vc_col-sm-9
+{
+    float: none !important;
+    display: block !important;
+    margin: 0px auto !important;
+    display: block !important;
+}
+
+html body div.row.footer-row
+{
+    display: none !important;
+}
+
+/*
+It just works
+Remove as required alex@a-graham.com
+*/
+
+/*
+
+html body a,
+html body a div span,
+html body a span,
+html body p,
+html body p,
+html body p span,
+html body p span a,
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6,
+html body div h1,
+html body div h2,
+html body div h3,
+html body div h4,
+html body div h5,
+html body div h6,
+html body div p h1,
+html body div p h2,
+html body div p h3,
+html body div p h4,
+html body div p h5,
+html body div p h6
+{
+    font-family: Arial !important;
+    font-style: normal !important;
+    font-size: 26px !important;
+    line-height: 32px !important;
+    justify-content: center !important;
+}
+
+
 body
 {
 }
@@ -19,8 +118,13 @@ div.pacbar .pacbar-wrapper
     border-bottom: 10px solid #e5d247;
 }
 
+div.pacbar.closed .pacbar-wrapper
+{
+    border-bottom: none;
+}
 
-div.pacbar.closed .pacbar-inner
+
+div.pacbar .pacbar-inner
 {
     width: 90%;
     height: 60px;
@@ -28,6 +132,13 @@ div.pacbar.closed .pacbar-inner
     text-align: center;
     position: relative;
     padding: 25px 0px 0px;
+}
+
+div.pacbar.closed .pacbar-inner
+{
+    height: 0px;
+    overflow: hidden;
+    display: none;
 }
 
 div.pacbar .pacbar-inner
@@ -68,6 +179,7 @@ div.pacbar .pacbar-inner ul li a
     font-size: 16px;
     color: #cfcfcf;
     border-radius: 20px;
+    outline: none !important;
 }
 
 div.pacbar .pacbar-inner ul li a.enabled,
@@ -90,24 +202,31 @@ div.pacbar .pacbar-control
 body div.pacbar .pacbar-control a
 {
     display: inline-block;
-    height: 65px;
+    height: 20px;
     background-color: #e3d244;
     text-align: center;
     padding: 2px 10px 6px 10px !important;
     color: #121212;
     font-size: 16px;
     border-radius: 0px 0px 8px 8px;
+    font-weight: bold !important;
+    outline: none !important;
 }
 
 div.pacbar.closed .pacbar-control
 {
+    margin-top: 20px;
+}
 
+div.pacbar .pacbar-control a
+{
+    width: auto;
+    padding: initial;
 }
 
 div.pacbar.closed .pacbar-control a
 {
-    font-weight: bold;
-    height: auto;
-    width: auto;
-    padding: initial;
+    border-radius: 20px !important;
 }
+
+*/
