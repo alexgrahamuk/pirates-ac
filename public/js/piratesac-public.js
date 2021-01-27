@@ -49,19 +49,61 @@ var pacbar =
 	{
 		jQuery(".pacbar ul li a.pacbar-erf").removeClass("enabled");
 		if (pacbar.erf === true)
+		{
 			jQuery(".pacbar ul li a.pacbar-erf").addClass("enabled");
+			jQuery("body").addClass("pacbar-erf");
+		}
+		else
+		{
+			jQuery("body").removeClass("pacbar-erf");
+		}
+
 
 		jQuery(".pacbar ul li a.pacbar-da").removeClass("enabled");
 		if (pacbar.da === true)
+		{
 			jQuery(".pacbar ul li a.pacbar-da").addClass("enabled");
+			jQuery("body").addClass("pacbar-da");
+			jQuery(".ls-container").each(function()
+			{
+				var slid = jQuery(this).attr("id");
+				jQuery("#" + slid).layerSlider("pause");
+			});
+		}
+		else
+		{
+			jQuery("body").removeClass("pacbar-da");
+			jQuery(".ls-container").each(function()
+			{
+				var slid = jQuery(this).attr("id");
+				jQuery("#" + slid).layerSlider("resume");
+			});
+
+		}
 
 		jQuery(".pacbar ul li a.pacbar-dc").removeClass("enabled");
 		if (pacbar.dc === true)
+		{
 			jQuery(".pacbar ul li a.pacbar-dc").addClass("enabled");
+			jQuery("body").addClass("pacbar-dc");
+		}
+		else
+		{
+			jQuery("body").removeClass("pacbar-dc");
+		}
+
 
 		jQuery(".pacbar ul li a.pacbar-dbi").removeClass("enabled");
 		if (pacbar.dbi === true)
+		{
 			jQuery(".pacbar ul li a.pacbar-dbi").addClass("enabled");
+			jQuery("body").addClass("pacbar-dbi");
+		}
+		else
+		{
+			jQuery("body").removeClass("pacbar-dbi");
+		}
+
 
 		if (pacbar.oc === true)
 			jQuery(".pacbar").removeClass("closed");

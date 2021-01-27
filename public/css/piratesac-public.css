@@ -134,114 +134,80 @@ div.pacbar.closed .pacbar-control a
 /*Theme specific*/
 
 
-/*
-
-html body #slider-section
+html body.pacbar-erf #main-wrapper,
+html body.pacbar-erf #main-wrapper div,
+html body.pacbar-erf #main-wrapper div span,
+html body.pacbar-erf #main-wrapper a,
+html body.pacbar-erf #main-wrapper a span,
+html body.pacbar-erf #main-wrapper p,
+html body.pacbar-erf #main-wrapper p a,
+html body.pacbar-erf #main-wrapper p span,
+html body.pacbar-erf #main-wrapper p span a,
+html body.pacbar-erf #main-wrapper h1,
+html body.pacbar-erf #main-wrapper h2,
+html body.pacbar-erf #main-wrapper h3,
+html body.pacbar-erf #main-wrapper h4,
+html body.pacbar-erf #main-wrapper h5,
+html body.pacbar-erf #main-wrapper h6,
+html body.pacbar-erf #main-wrapper label
 {
-    display: none !important;
-}
-
-html body #logo
-{
-    display: none !important;
-}
-
-html body #hb-modal-overlay
-{
-    display: none !important;
-}
-
-html body div,
-html body img
-{
-    display: block !important;
-    background-image: none !important;
-    width: 100% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-html body span
-{
-    background-image: none !important;
+    font-family: Arial !important;
+    font-style: normal !important;
+    font-size: 20px !important;
+    line-height: 26px !important;
 }
 
 
-
-.vc_col-sm-1,
-.vc_col-sm-10,
-.vc_col-sm-11,
-.vc_col-sm-12,
-.vc_col-sm-2,
-.vc_col-sm-3,
-.vc_col-sm-4,
-.vc_col-sm-5,
-.vc_col-sm-6,
-.vc_col-sm-7,
-.vc_col-sm-8,
-.vc_col-sm-9
+html body.pacbar-dc #footer .container,
+html body.pacbar-dc .vc_col-sm-1,
+html body.pacbar-dc .vc_col-sm-10,
+html body.pacbar-dc .vc_col-sm-11,
+html body.pacbar-dc .vc_col-sm-12,
+html body.pacbar-dc .vc_col-sm-2,
+html body.pacbar-dc .vc_col-sm-3,
+html body.pacbar-dc .vc_col-sm-4,
+html body.pacbar-dc .vc_col-sm-5,
+html body.pacbar-dc .vc_col-sm-6,
+html body.pacbar-dc .vc_col-sm-7,
+html body.pacbar-dc .vc_col-sm-8,
+html body.pacbar-dc .vc_col-sm-9,
+html body.pacbar-dc .wpb_column,
+html body.pacbar-dc .row .col-3,
+html body.pacbar-dc #footer .row .col-4,
+html body.pacbar-dc #footer .row .col-6,
+html body.pacbar-dc #footer .row .col-10,
+html body.pacbar-dc #footer .row .col-12,
+html body.pacbar-dc #footer .row.footer-row
 {
     float: none !important;
     display: block !important;
     margin: 0px auto !important;
     display: block !important;
+    width: 100% !important;
+    padding: 0px !important;
+    flex: none !important;
+    flex-direction: initial !important;
+    text-align: center;
 }
 
-html body div.row.footer-row
+html body.pacbar-dbi div,
+html body.pacbar-dbi div p,
+html body.pacbar-dbi span,
+html body.pacbar-dbi a,
+html body.pacbar-dbi div div
 {
-    display: none !important;
+    background-image: none !important;
 }
 
-
-html body a,
-html body a div span,
-html body a span,
-html body p,
-html body p,
-html body p span,
-html body p span a,
-html body h1,
-html body h2
+html body.pacbar-da .ls-container,
+html body.pacbar-da .ls-container div
 {
-    font-family: Arial !important;
-    font-style: normal !important;
-    font-size: 26px !important;
-    line-height: 32px !important;
-    justify-content: center !important;
+    transform: none !important;
+    background: none !important;
+    background-image: none !important;
 }
 
-html body h3,
-html body h4,
-html body h5,
-html body h6,
-html body div h1,
-html body div h2,
-html body div h3,
-html body div h4
+html body.pacbar-da .ls-container div video
 {
-    font-family: Arial !important;
-    font-style: normal !important;
-    font-size: 26px !important;
-    line-height: 32px !important;
-    justify-content: center !important;
+    display: none;
 }
-
-html body div h5,
-html body div h6,
-html body div p h1,
-html body div p h2,
-html body div p h3,
-html body div p h4,
-html body div p h5,
-html body div p h6
-{
-    font-family: Arial !important;
-    font-style: normal !important;
-    font-size: 26px !important;
-    line-height: 32px !important;
-    justify-content: center !important;
-}
-
-
-
-*/
